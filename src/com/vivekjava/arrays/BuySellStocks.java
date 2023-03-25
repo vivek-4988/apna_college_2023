@@ -16,6 +16,33 @@ public class BuySellStocks {
             }
         }
         System.out.println(maxProfit);
+
+
+
+
+
+
+
+//        int buyIndex = 0;
+//        for (int i = 0; i < prices.length; i++) {
+//            if(prices[i] < prices[buyIndex]){
+//                buyIndex = i;
+//            }
+//        }
+//
+//        int sellIndex = -1;
+//        for (int i = buyIndex; i < prices.length; i++) {
+//            if(prices[i] > prices[buyIndex]){
+//                sellIndex = i;
+//            }
+//        }
+//        if(sellIndex==-1){
+//            System.out.println("no profit");
+//            return;
+//        }
+//        int profit= prices[sellIndex] - prices[buyIndex];
+//        System.out.println(profit);
+
     }
 
 
