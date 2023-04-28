@@ -17,6 +17,28 @@ public class ContainerWithMostWater {
 
         return maxWater;
     }
+
+    public static int storeWater2Pointer(ArrayList<Integer> height){
+        int maxWater = 0;
+        int lp= 0;
+        int rp = height.size()-1;
+
+        while (lp < rp){
+            int ht = Math.min(height.get(lp),height.get(rp));
+            int width = rp-lp;
+            int curWater = ht*width;
+            maxWater = Math.max(maxWater,curWater);
+
+            if(height.get(lp) < height.get(rp)){
+                lp++;
+            }else{
+                rp--;
+            }
+        }
+
+        return maxWater;
+    }
+
     public static void main(String[] args) {
         ArrayList<Integer> height= new ArrayList<>();
         //1,8,6,2,5,4,8,3,7
@@ -30,6 +52,8 @@ public class ContainerWithMostWater {
         height.add(3);
         height.add(7);
 
-        System.out.println(storeWater(height));
+       // System.out.println(storeWater(height));
+         System.out.println(storeWater2Pointer(height));
+
     }
 }
